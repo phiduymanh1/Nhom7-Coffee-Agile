@@ -593,6 +593,26 @@ public class SanPham_Views extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnsuaActionPerformed
 
+    private void btnxoaActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        i = tblQLSP.getSelectedRow();
+        if (i == -1) {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn dòng cần xóa");
+            return;
+        }
+        String maSPcx = txtmasp.getText().trim();
+        int confirm = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+        if (confirm != JOptionPane.YES_OPTION) {
+            return; // User chose not to proceed
+        }
+        this.repo_SP.xoa(maSPcx);
+        this.fillTable(repo_SP.getAll());
+        this.clearForm();
+        JOptionPane.showMessageDialog(this, "Xóa Thành Công");
+    }   
+
+    private void btnhienthiActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        this.fillTable(repo_SP.getAll());
+    }
     
     private void btnlammoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlammoiActionPerformed
         this.clearForm();
