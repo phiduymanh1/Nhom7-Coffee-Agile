@@ -90,5 +90,54 @@ public class Repo_SanPham {
             return 0;
         }
     }
-   
+
+    
+   public int xoa(String maSPcx) {
+
+        try {
+            con = DBConnect.getConnection();
+
+            // Bắt đầu giao dịch
+            con.setAutoCommit(false);
+
+            // Xóa dữ liệu trong bảng HoaDonChiTiet trước
+            String sqlDeleteDetails = "DELETE FROM HoaDonChiTiet WHERE MaSP=?";
+            pr = con.prepareStatement(sqlDeleteDetails);
+            pr.setObject(1, maSPcx);
+            pr.executeUpdate();
+
+            // Xóa dữ liệu trong bảng SanPham
+            String sqlDeleteProduct = "DELETE FROM SanPham WHERE MaSP=?";
+            pr = con.prepareStatement(sqlDeleteProduct);
+            pr.setObject(1, maSPcx);
+            int result = pr.executeUpdate();
+
+            // Cam kết giao dịch
+            con.commit();
+
+            return result;
+        } catch (Exception e) {
+            if (con != null) {
+                try {
+                    // Rollback giao dịch nếu có lỗi
+                    con.rollback();
+                } catch (Exception rollbackEx) {
+                    rollbackEx.printStackTrace();
+                }
+            }
+            e.printStackTrace();
+            return 0;
+        } finally {
+            try {
+                if (pr != null) {
+                    pr.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
 }
