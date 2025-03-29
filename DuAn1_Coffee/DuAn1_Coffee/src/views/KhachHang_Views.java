@@ -479,35 +479,11 @@ public class KhachHang_Views extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_suaActionPerformed
 
     private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
-        // TODO add your handling code here:
-        int index = tblisst.getSelectedRow();
-        if (index >= 0) {
-            String Ma = (String) tblisst.getValueAt(index, 0);
-
-            int confirm = JOptionPane.showConfirmDialog(null, "Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-            if (confirm == JOptionPane.YES_OPTION) {
-                repositories_khachhang.delete(Ma);
-
-                JOptionPane.showMessageDialog(null, "Đã xóa khách hàng thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-
-                hienthi();
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Vui lòng chọn khách hàng để xóa!", "Thông báo", JOptionPane.WARNING_MESSAGE);
-        }
+        
     }//GEN-LAST:event_btn_xoaActionPerformed
 
     private void btn_xoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoa1ActionPerformed
-        // TODO add your handling code here:
-        txtkhachang.setText(null);
-        txt_tenkh.setText(null);
-        txt_diemthanhvien.setText(null);
-        txt_sodt.setText(null);
-        txt_loaikhachhang.setText(null);
-        txt_diachi.setText(null);
-        rdo_nam.setSelected(false);
-        rdo_nu.setSelected(false);
-        buttonGroup1.clearSelection();
+        
     }//GEN-LAST:event_btn_xoa1ActionPerformed
 
     private void tblisstMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblisstMouseClicked
@@ -531,28 +507,7 @@ public class KhachHang_Views extends javax.swing.JPanel {
     }//GEN-LAST:event_tblisstMouseClicked
 
     private void BtnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTimKiemActionPerformed
-        // TODO add your handling code here:
-        String searchQuery = txtTimKiem.getText().trim();
-
-        // Kiểm tra xem ô tìm kiếm có trống không
-        if (searchQuery.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Vui lòng nhập thông tin tìm kiếm!", "Thông báo", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-
-        // Tìm kiếm khách hàng
-        List<model_khachhang> kh = server.TimkiemKH(searchQuery);
-
-        if (kh.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Không tìm thấy khách hàng nào!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            // Cập nhật bảng kết quả tìm kiếm
-            defaultTableModel.setRowCount(0); // Xóa các hàng cũ
-            for (model_khachhang kha : kh) {
-                defaultTableModel.addRow(new Object[]{kha.getMaKH(), kha.getTenKh(), kha.getGioiTinh(), kha.getDiaChi(), kha.getSDT(), kha.getLoaiKhacHang(), kha.getDiemThanhVien()});
-            }
-            JOptionPane.showMessageDialog(this, "Danh sách được tìm thấy!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-        }
+        
 
     }//GEN-LAST:event_BtnTimKiemActionPerformed
 
