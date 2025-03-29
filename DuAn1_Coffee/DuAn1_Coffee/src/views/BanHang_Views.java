@@ -24,7 +24,7 @@ import model.ThanhToan;
 import model.model_khachhang;
 import service.BanHangDao;
 import service.ThanhToanDao;
-
+//udpate
 /**
  *
  * @author tranl
