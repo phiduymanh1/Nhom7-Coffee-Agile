@@ -15,7 +15,6 @@ public class Model_Login {
     private String ChucVu;
 
     public Model_Login() {
-//        không tham số
     }
 
     public Model_Login(int ID, String TaiKhoan, String MatKhau, String ChucVu) {
