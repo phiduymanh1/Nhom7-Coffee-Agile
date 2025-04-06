@@ -44,12 +44,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="118" max="32767" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="118" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel3" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
@@ -63,7 +58,12 @@
                               <Component id="lblBaoLoiTK" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                               <Component id="lblBaoLoiMK" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="9" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="137" max="32767" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="118" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
