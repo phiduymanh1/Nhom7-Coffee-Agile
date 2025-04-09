@@ -46,4 +46,4 @@ public class Server_Login {
     public static boolean phanQuyen() {
             return Server_Login.daDangNhap() && Server_Login.user.getChucVuLogin().equals("QuanLy");
     }
-}
+} 
