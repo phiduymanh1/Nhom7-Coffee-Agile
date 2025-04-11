@@ -489,7 +489,7 @@ public class NhanVien_Views extends javax.swing.JPanel {
             clearForm();
             JOptionPane.showMessageDialog(null, "Đã reset form thành công.", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
         }
-    }//GEN-LAST:event_btnResetActionPerformed
+    }
 
     private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
         String searchQuery = txtTimkiem.getText().trim();
