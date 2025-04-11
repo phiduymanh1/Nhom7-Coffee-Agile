@@ -261,9 +261,7 @@ public class DangNhap extends javax.swing.JFrame {
         jpnThoai.setLayout(jpnThoaiLayout);
         jpnThoaiLayout.setHorizontalGroup(
             jpnThoaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnThoaiLayout.createSequentialGroup()
-                .addComponent(lblThoai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(lblThoai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpnThoaiLayout.setVerticalGroup(
             jpnThoaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,8 +345,8 @@ public class DangNhap extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblThongTin)
-                .addGap(513, 513, 513))
+                .addComponent(lblThongTin, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(505, 505, 505))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -392,19 +390,19 @@ public class DangNhap extends javax.swing.JFrame {
     private void lblDangXuatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblDangXuatMouseClicked
       int choice = JOptionPane.showConfirmDialog(this, "Bạn có muốn đăng xuất không?", "ĐĂNG XUẤT", JOptionPane.YES_NO_OPTION);
     
-    if (choice == JOptionPane.YES_OPTION) {
-        Server_Login.dangXuat(); 
-        JOptionPane.showMessageDialog(this, "Đăng xuất thành công!", "THÔNG BÁO", JOptionPane.INFORMATION_MESSAGE);
-        this.dispose();        
-        LoginDialog loginDialog = new LoginDialog(this, true);
-        loginDialog.setVisible(true);     
-        if (Server_Login.daDangNhap()) {
-            DangNhap dangNhap = new DangNhap();
-            dangNhap.setVisible(true);
-        } else {
-            System.exit(0);
+        if (choice == JOptionPane.YES_OPTION) {
+            Server_Login.dangXuat(); 
+            JOptionPane.showMessageDialog(this, "Đăng xuất thành công!", "THÔNG BÁO", JOptionPane.INFORMATION_MESSAGE);
+            this.dispose();        
+            LoginDialog loginDialog = new LoginDialog(this, true);
+            loginDialog.setVisible(true);     
+            if (Server_Login.daDangNhap()) {
+                DangNhap dangNhap = new DangNhap();
+                dangNhap.setVisible(true);
+            } else {
+                System.exit(0);
+            }
         }
-    }
     }//GEN-LAST:event_lblDangXuatMouseClicked
 
     /**
@@ -433,7 +431,7 @@ public class DangNhap extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(DangNhap.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
+        //</editor-fold> 
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
