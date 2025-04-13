@@ -71,7 +71,7 @@ public class Voucher_Views extends javax.swing.JPanel {
         txtsoptgiam.setText(soptGiam);
         txtdkgiam.setText(dkGiam);
         txtmucgiamtoida.setText(mucGiamToiDastr);
-        if(hinhThuc.equals("Giảm Tiền")){
+        if(hinhThuc.equals("Giam Tien")){
             cbbhinhthuc.setSelectedItem("Giảm Tiền");
             txtsoptgiam.setEnabled(false);
             txtsotiengiam.setEnabled(true);
@@ -92,6 +92,7 @@ public class Voucher_Views extends javax.swing.JPanel {
         } else {
             rdohethieuluc.setSelected(true);
         }
+        
     }
         private void updateFieldsBasedOnComboBox() {
             String selected = cbbhinhthuc.getSelectedItem().toString();
@@ -373,13 +374,12 @@ public class Voucher_Views extends javax.swing.JPanel {
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtsotiengiam, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                                .addComponent(cbbhinhthuc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtsoptgiam, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtsotiengiam, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                            .addComponent(cbbhinhthuc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(txtsoptgiam)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel9)))))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
